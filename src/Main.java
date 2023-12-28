@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+import java.util.Random;
 
 public class Main {
     static NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
@@ -20,8 +21,8 @@ public class Main {
     }
 
     private static void task2(int[] arr) {
-        int min = Integer.MAX_VALUE;
-        int max = 0;
+        int min = arr[0];
+        int max = arr[0];
         for (int i : arr) {
             if (i < min) {
                 min = i;
@@ -57,7 +58,7 @@ public class Main {
     }
 
     public static int[] generateRandomArray() {
-        java.util.Random random = new java.util.Random();
+        Random random = new Random();
         int[] arr = new int[30];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(100_000) + 100_000;
